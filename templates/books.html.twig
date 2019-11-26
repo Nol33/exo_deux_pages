@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    BOOKS
+{% endblock %}
+
+{% block body %}
+    <table>
+        {% for book in books %}
+        <tr>
+            <td>
+            {{book.title }} {{book.style }} {{book.nbpages }}</td>
+            <td>
+                <a href="{{ path('onebook',{'id': book.id}) }}">Cliquez ici</a>
+            </td>
+        </tr>
+
+        {% endfor %}
+    </table>
+{% endblock %}

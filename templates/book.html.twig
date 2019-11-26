@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    BOOKS
+{% endblock %}
+
+{% block body %}
+    <table>
+            <tr>
+                <td>
+                    {{book.title }} {{book.style }} {{book.nbpages }}</td>
+            </tr>
+    </table>
+{% endblock %}

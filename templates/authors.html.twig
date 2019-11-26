@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    AUTHORS
+{% endblock %}
+
+{% block body %}
+    <table>
+        {% for author in authors %}
+            <tr>
+                <td>
+                    {{ author.firstname }}
+                </td>
+                <td>
+                    {{ author.name }}
+                </td>
+                <td>
+                    <a href="{{ path('author',{'id': author.id}) }}">Cliquez ici</a>
+                </td>
+            </tr>
+        {% endfor %}
+
+
+
+    </table>
+{% endblock %}
+
